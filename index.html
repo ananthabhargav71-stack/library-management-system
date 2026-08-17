@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhargav's Library &mdash; Library Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero__img" style="background-image:url('hero.jpg');"></div>
+    <div class="hero__scrim"></div>
+
+    <nav class="hero__nav">
+      <span class="hero__nav-mark">Bhargav's Library</span>
+      <span class="hero__nav-tag">Est. Reading Room</span>
+    </nav>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">Silence, Please &mdash; Reading in Progress</p>
+      <h1 class="hero__title">A quiet place<br>to keep track of<br>every book.</h1>
+      <p class="hero__sub">Search the stacks, follow a due date, find your branch. Everything the library holds, indexed the old way &mdash; card by card.</p>
+    </div>
+
+    <div class="hero__stamp">
+      <span class="hero__stamp-date" id="todayStamp">14 AUG</span>
+      <span class="hero__stamp-label">Issued Today</span>
+    </div>
+  </header>
+
+  <main class="drawer">
+    <div class="drawer__label">
+      <span class="drawer__label-index">Catalog&nbsp;Index</span>
+      <span class="drawer__label-rule"></span>
+    </div>
+
+    <div class="catalog" id="catalog">
+      <!-- Cards injected by script.js -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Return books on time. Everyone else is waiting for them too.</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membership &mdash; Bhargav's Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="page-header">
+    <a class="page-header__mark" href="index.html">Bhargav's Library</a>
+    <span class="page-header__crumb"><a href="index.html">Catalog</a> / Membership</span>
+  </header>
+
+  <section class="page-intro">
+    <p class="page-intro__eyebrow">Section E &middot; No. 005</p>
+    <h1 class="page-intro__title">Membership</h1>
+    <p class="page-intro__sub">Three ways to borrow. Pick a plan, then issue a card below &mdash; no queue, no desk.</p>
+  </section>
+
+  <section class="plans">
+    <div class="plan-card">
+      <h2 class="plan-card__name">Standard</h2>
+      <p class="plan-card__price">Free</p>
+      <ul class="plan-card__list">
+        <li>3 books at a time</li>
+        <li>14-day loan period</li>
+        <li>One branch of your choice</li>
+      </ul>
+    </div>
+    <div class="plan-card plan-card--featured">
+      <span class="plan-card__badge">Most Popular</span>
+      <h2 class="plan-card__name">Plus</h2>
+      <p class="plan-card__price">&#8377;199 / year</p>
+      <ul class="plan-card__list">
+        <li>8 books at a time</li>
+        <li>21-day loan period</li>
+        <li>Access to all branches</li>
+        <li>Hold requests online</li>
+      </ul>
+    </div>
+    <div class="plan-card">
+      <h2 class="plan-card__name">Researcher</h2>
+      <p class="plan-card__price">&#8377;499 / year</p>
+      <ul class="plan-card__list">
+        <li>15 books at a time</li>
+        <li>30-day loan period</li>
+        <li>Reference room access</li>
+        <li>Inter-branch transfers</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="signup">
+    <h2 class="signup__title">Issue a card</h2>
+    <p class="signup__sub">Fill this in to generate a membership card. Nothing is sent anywhere &mdash; this runs entirely in your browser.</p>
+
+    <form id="signupForm" novalidate>
+      <div class="signup__row">
+        <label for="fullName">Full name</label>
+        <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+      </div>
+      <div class="signup__row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+      </div>
+      <div class="signup__row">
+        <label for="plan">Plan</label>
+        <select id="plan" name="plan">
+          <option value="Standard">Standard &mdash; Free</option>
+          <option value="Plus">Plus &mdash; &#8377;199/yr</option>
+          <option value="Researcher">Researcher &mdash; &#8377;499/yr</option>
+        </select>
+      </div>
+      <div class="signup__row">
+        <label for="branch">Home branch</label>
+        <select id="branch" name="branch">
+          <option value="Central">Central</option>
+          <option value="Eastside">Eastside</option>
+          <option value="Westgate">Westgate</option>
+        </select>
+      </div>
+      <p class="signup__error" id="formError"></p>
+      <button type="submit" class="signup__submit">Issue membership card</button>
+    </form>
+  </section>
+
+  <section class="card-result" id="cardResult">
+    <p class="card-result__eyebrow">Membership Issued</p>
+    <h3 class="card-result__name" id="resultName">&nbsp;</h3>
+    <dl class="card-result__grid">
+      <div><dt>Member ID</dt><dd id="resultId">&mdash;</dd></div>
+      <div><dt>Plan</dt><dd id="resultPlan">&mdash;</dd></div>
+      <div><dt>Home Branch</dt><dd id="resultBranch">&mdash;</dd></div>
+      <div><dt>Issued</dt><dd id="resultDate">&mdash;</dd></div>
+    </dl>
+  </section>
+
+  <footer class="site-footer">
+    <p>Return books on time. Everyone else is waiting for them too.</p>
+  </footer>
+
+<script src="membership.js"></script>
+</body>
+</html>
